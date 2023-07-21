@@ -110,6 +110,10 @@ legend {
 
 /* Стилизация */
 
+    html {
+      scroll-behavior: smooth;
+    }
+
   .container {
     max-width: 1110px;
     margin: 0 auto;
@@ -169,6 +173,7 @@ h1, p {
     padding: 10px 20px;
     border-radius: 20px;
     background: var(--active-color);
+    border: none;
   }
   h2 {
     color: #2C2D35;
@@ -199,9 +204,34 @@ h1, p {
 
   .nav__link:focus-visible {
     color: var(--text-color);
-    outline: solid  1px green;
+    background-color: var(--active-color);
+    outline: none;
   }
 
+  .tabs:hover:not(:focus-visible) {
+    color: #ffffff;
+    background-color: var(--textThree-color);
+    transition: all 0.3s ease-in-out;
+    outline: solid 1px var(--textThree-color);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+  .tabs:focus-visible {
+    color: var(--text-color);
+    background-color: var(--active-color);
+    outline: solid  2px green;
+  }
+  .tabs:active:not(:focus-visible) {
+    color: #ffffff;
+    background-color: #376B44;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
 
   svg:hover path {
     stroke: var(--textThree-color);
@@ -217,7 +247,8 @@ h1, p {
   }
   .header__cart:focus-visible {
     color: var(--text-color);
-    outline: solid 1px green;
+    outline: none;
+    background-color: var(--active-color);
   }
 
   .btn-effect:hover:not(:focus-visible) {
@@ -257,6 +288,27 @@ h1, p {
     background-color: #D9B949;
     transition: all 0.3s ease-in-out;
    }
+    
+  .footer-link-svg:hover path {
+    fill: var(--textThree-color);
+    transition: stroke 0.3s ease-in-out;
+  }
+
+  .footer-link-svg:focus-visible path {
+    fill: var(--textThree-color);
+    stroke:#D4E8D9;
+    transition: stroke 0.3s ease-in-out;
+  }
+
+  .footer-link-svg:focus-visible {
+    outline: none;
+    stroke: var(--active-color);
+  }
+
+  .footer-link-svg:active:not(:focus-visible) path {
+    fill: #376B44;
+    transition: stroke 0.3s ease-in-out;
+  }
 
    /*  Section #2 */
 
@@ -311,6 +363,17 @@ h1, p {
     color: var(--text-color);
     margin-bottom: 30px;
    }
+
+  /*  Section #2 tabs */
+  .paintings__grid {
+    display: none;
+  }
+  .paintings__grid--active {
+    display: grid;
+  }
+  .tabs--active {
+    background-color: var(--textThree-color);
+  }
 
     /*  Section #3 */
 
@@ -391,7 +454,7 @@ h1, p {
     }
     .img-footer {
       width: 143px;
-      margin-bottom: 41px;
+      margin-bottom: 30px;
     }
     .footer__container {
       padding-top: 23px;
@@ -406,11 +469,43 @@ h1, p {
     .text-footer {
       color: #86928B;
       font-size: 18px;
+      
     }
     .footer__centr {
       display: flex;
       margin-right: auto;
     }
+    .countries-year {
+      display: flex;
+      flex-direction: column;
+    }
     .countries-year:not(:last-child) {
       margin-right: 60px;
+    }
+    .footer-H3 {
+      display: inline-block;
+      font-size: 20px;
+      color: var(--text-color);
+      margin-bottom: 6px;
+    }
+    .text-center {
+      line-height: 150%;
+      margin-bottom: 6px;
+    }
+    .footer-link-svg:not(:last-child) {
+      margin-right: 30px;
+    }
+    .right-footer {
+      font-size: 12px;
+      line-height: 120%;
+    }
+    .footer-link-svg {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    .nav__link {
+      display: block;
+    }
+    .footer-link {
+      margin-bottom: 6px;
     }
