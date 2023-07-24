@@ -137,13 +137,34 @@ legend {
   .header__nav, .nav__list {
     gap: 60px;
   }
+  .header__btn-open {
+    display: none;
+  }
+  .nav__close {
+    display: none;
+  }
+  .nav-btn-cart {
+    display: flex;
+  }
+  .nav__list {
+    margin-right: 60px;
+  }
   
   /*  Section #1 */
 
-h1, p {
+  .line {
+    display: none;
+  }
+
+  .container {
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+
+  h1, p {
   margin: 0;
   padding: 0;
-}
+  }
 
   .desc {
     font-size: 18px;
@@ -509,3 +530,9 @@ h1, p {
     .footer-link {
       margin-bottom: 6px;
     }
+    .right-footer {
+    display: flex;
+    flex-direction: column;
+    }
+    
+     
